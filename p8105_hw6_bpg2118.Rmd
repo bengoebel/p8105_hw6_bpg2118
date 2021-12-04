@@ -177,7 +177,8 @@ weather_df <-
 Let's now do the following:
 
 *   Generate 5000 bootstrap samples
-*   Fit a linear regression model on each sample
+*   Fit a linear regression model on each sample with `tmax` as the response
+and `tmin` as the predictor.
 *   Estimate $r^2$ and estimate log($\beta_0 * \beta_1$) for each fitted model.
 We will use natural log here.
 
@@ -239,7 +240,8 @@ bootstrap_results %>%
 ```
 
 Both estimates appear roughly normally distributed. However, the peak of each
-distribution appears a little less normal.
+distribution appears a little less normal. The R-Squared distribution
+appears to be a little left skewed.
 
 We can provide a point estimate of the r-squared and the natural log of the 
 product of the beta coefficients by averaging the estimates over all 
